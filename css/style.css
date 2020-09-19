@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+}
+.meny{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 2px 0px rgb(255, 255, 255); 
+}
+.logo_text{
+    margin: 0px 0px 0px 70px;
+    font-size: 36px;
+}
+.meny li{
+    display: inline-block;
+    font-size: 25px;
+    margin: 0px 0px 0px 100px;
+}
+.meny a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.meny ol{
+    margin: 0px 0px 0px 750px;
+}
+.txmany{
+    color: rgb(167, 167, 167);
+}
+.txmany::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: 5px 0px 0px 0px;
+    display: block;
+    background-color: rgb(167, 167, 167);
+}
+.meny a:hover{
+    transition-duration: 1s;
+    color: rgb(167, 167, 167);
+}
+.cate{
+    height: 893.4px;
+    display: flex;
+}
+.cate_servar{
+    height: 100%;
+    width: 270px;
+    box-shadow: 2px 0px 0px 0px rgb(167, 167, 167);
+    text-align: center;
+}
+.cate_servar_1{
+    padding: 15px;
+    box-shadow: 0px 2px 0px 0px rgb(167, 167, 167);
+}
+.text_cate{
+    width: 100%;
+    padding: 15px 0px 0px 0px;
+}
+.photo{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.logo_text p{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+h1 ,h2{
+    width: 100%;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+}
+h2 .photo{
+    margin: 0px 7px 0px 0px;
+}
+h1{
+    font-size: 30px;
+    padding: 12px 0px 11px 0px;
+    box-shadow: 0px 2px 0px 0px rgb(167, 167, 167);
+}
+h1 .photo{
+    width: 35px;
+    height: 35px;
+    margin: 0px 0px 0px 50px;
+}
+h1 p{
+    margin: 0px 0px 0px 10px;
+}
+.cate_onlane{
+    width: 100%;
+}
+.mesega{
+    width: 1000px;
+}
+.mesega_neme{
+    font-weight: 900;
+}
+.mesega_neme ,.mesega_text{
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    padding: 8px 0px 0px 15px;
+}
+.mesega::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: 5px 0px 0px 0px;
+    display: block;
+    background-color: rgb(167, 167, 167);
+}
+.mesege0{
+    height: 730px;
+    overflow: auto;
+}
+form{
+    display: flex;
+}
+.input_text ,.input_text1{
+    border: 3px solid rgb(167, 167, 167);
+    margin: 18px 0px 0px 27px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 630px;
+    font-size: 20px;
+    height: 55px;
+    resize: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+}
+.input_text{
+    width: 120px;
+}
+.input_text{
+    display: flex;
+    width: 200px;
+    text-align: center;
+}
+.inpun_button{
+    width: 100px;
+    height: 50px;
+    margin: 24px 0px 0px 20px;
+    border: 3px solid rgb(167, 167, 167);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+/*
+ Шрифти 
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
