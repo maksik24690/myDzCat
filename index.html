@@ -2,197 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Lato:ital@1&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>ЧАТ ДРУЗЯКИ</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
     <div class="meny">
-
-        <div class="logo_text">
-
-            <p>ЧАТ ДРУЗЯКИ</p>
-
-        </div>
-
-        <ol>
-
-            <li><div class="txmany">ЧАТ</div></li>
-
-            <li><a href="">ДРУЗІ</a></li>
-            
-            <li><a href="">КОНТАКТИ</a></li>
-
-        </ol>
-
+        <div class="logo_text"><p>ЧАТ ДРУЗЯКИ</p></div>
     </div>
 
     <div class="cate">
-
         <div class="cate_servar">
-
-            <div class="cate_servar_1">
-
-                <h2> <div class="photo"></div> Чат Онлайн</h2>
-
-            </div>
-
+            <h2>Чат Онлайн</h2>
         </div>
-
         <div class="cate_onlane">
-
-                <h1> 
-
-                    <div class="photo"></div> 
-                    
-                    <p>Чат Онлайн</p>
-                
-                </h1>
-
-                <div class="mesege0"> 
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                    <div class="mesega">
-
-                        <div class="mesega_neme">neme:</div>
-    
-                        <div class="mesega_text">text</div>
-    
-                    </div>
-
-                </div>
-
-                <div class="input">
-
-                    <form action=#>
-
-                        <textarea name="" class="input_text" id="" cols="30" rows="10" placeholder="name"></textarea>
-
-                        <textarea name="" class="input_text1" id="" cols="30" rows="10" placeholder="text"></textarea>
-
-                        <input class="inpun_button" type="button" value="Отправить">
-
-                    </form>
-
-
-                </div>
-
+            <h1>Чат Онлайн</h1>
+            <div class="mesege0" id="chat-box"></div>
+            <div class="input">
+                <input type="text" id="name-input" class="input_text" placeholder="Ім'я">
+                <input type="text" id="message-input" class="input_text1" placeholder="Повідомлення">
+                <button class="inpun_button" onclick="sendMessage()">Відправити</button>
+            </div>
         </div>
-        
     </div>
 
+    <script>
+        function sendMessage() {
+            let name = document.getElementById('name-input').value.trim();
+            let message = document.getElementById('message-input').value.trim();
+            
+            if (name === '' || message === '') {
+                alert('Будь ласка, введіть ім'я та повідомлення!');
+                return;
+            }
+            
+            let chatBox = document.getElementById('chat-box');
+            let messageElement = document.createElement('div');
+            messageElement.classList.add('mesega');
+            messageElement.innerHTML = `<div class='mesega_neme'>${name}:</div><div class='mesega_text'>${message}</div>`;
+            chatBox.appendChild(messageElement);
+            
+            document.getElementById('message-input').value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
 </body>
 </html>
